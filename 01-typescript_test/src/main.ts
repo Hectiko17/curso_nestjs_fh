@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
 import { age, name } from './bases/01-types.ts'
 import { pokememonId, pokemon } from './bases/02-objects.ts'
+import { ps5 } from './bases/03-classes.ts'
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -20,11 +21,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     ${name } ${age} ${pokememonId.join(';')}
     ${pokemon.name}
+    
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more buuuu 
       
     </p>
   </div>
 `
-
+ps5
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
