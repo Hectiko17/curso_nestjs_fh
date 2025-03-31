@@ -8,6 +8,7 @@ import { ps5 } from './bases/03-classes.ts'
 
 
 
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
@@ -22,6 +23,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     ${name } ${age} ${pokememonId.join(';')}  ${ps5.name}
     ${pokemon.name}
+    
    
     
     
