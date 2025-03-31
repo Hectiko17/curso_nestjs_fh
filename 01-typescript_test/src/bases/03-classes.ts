@@ -1,13 +1,24 @@
+import axios from "axios"
+
 export class Consoles {
-public id: number;
-public name: string;
+  
 
-constuctor(id:number,name:string){
+constructor(
+    public id:number,
+    public name:string){
 
-    this.id=id;
-    this.name=name;
+   
     console.log("constructor llamado")
 }
 
+async getMoves(){
+const resp = await axios.get('https://pokeapi.co/api/v2/pokemon/4');
+console.log(resp.data.moves);
+return resp.data.moves;
+
+
 }
-export const ps5= new Consoles(5,"ps5")
+
+}
+export const ps5= new Consoles(4, 'Ps5')
+ps5.getMoves();
