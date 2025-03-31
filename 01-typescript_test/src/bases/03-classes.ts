@@ -1,4 +1,5 @@
 import axios from "axios"
+import { PokeapiResponse } from '../interfaces/pokeapi-response.interface';
 
 export class Consoles {
   
@@ -12,8 +13,8 @@ constructor(
 }
 
 async getMoves(){
-const resp = await axios.get('https://pokeapi.co/api/v2/pokemon/4');
-console.log(resp.data.moves);
+const resp = await axios.get<PokeapiResponse>('https://pokeapi.co/api/v2/pokemon/4');
+console.log(resp.data.forms);
 return resp.data.moves;
 
 
